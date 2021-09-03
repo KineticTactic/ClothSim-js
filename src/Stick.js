@@ -7,7 +7,8 @@ class Stick {
     }
 
     render(ctx) {
-        ctx.strokeStyle = `hsl(${constrain(mapRange(this.actualLength, this.length * 0.9, this.length * 1.1, 360, 0), 360, 0)}, 100%, 40%)`;
+        const color = constrain(mapRange(this.actualLength, this.length * 0.9, this.length * 1.1, 360, 0), 360, 0);
+        ctx.strokeStyle = `hsl(${color}, 100%, 40%)`;
         ctx.beginPath();
         ctx.moveTo(this.pointA.position.x, this.pointA.position.y);
         ctx.lineTo(this.pointB.position.x, this.pointB.position.y);
