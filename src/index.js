@@ -3,7 +3,7 @@ canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
 const ctx = canvas.getContext("2d");
-console.log(ctx);
+// console.log(ctx);
 
 const points = [];
 const sticks = [];
@@ -134,11 +134,11 @@ canvas.addEventListener("mousemove", (e) => {
 });
 
 window.addEventListener("keydown", (e) => {
-    switch (e.keyCode) {
-        case 75:
+    switch (e.code) {
+        case "KeyK":
             tool = "KNIFE";
             break;
-        case 68:
+        case "KeyD":
             tool = "DRAG";
             break;
     }
